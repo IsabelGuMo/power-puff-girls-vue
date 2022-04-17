@@ -15,12 +15,14 @@ class PowerPuffGirl extends HTMLElement {
                 --skin-color: #f4cfb4;
                 --border-size: 3px;
                 --power-puff-color: #53a7e7;
+
+                position: relative;
         }
 
         .container {
             width: var(--width);
             height: var(--height);
-            background: #222;
+            background: #0005;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,7 +43,7 @@ class PowerPuffGirl extends HTMLElement {
             z-index: 5;
         }
 
-        .hair {
+        :host(.bubbles) .hair {
             width: 100%;
             height: 40%;
             background: 
@@ -71,6 +73,27 @@ class PowerPuffGirl extends HTMLElement {
           border: var(--border-size) solid #000;
           border-radius: 50%;
           clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+        }
+
+        .arms {
+            --arm-height: calc(var(--height) * 0.23);
+
+            position: absolute;
+            width: var(--width);
+            height: var(--arm-height);
+            transform: translateY(calc(2 * var(--arm-height)));
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .arm {
+            width: 36%;
+            height: 40%;
+            border-radius: 20px;
+            border: var(--border-size) solid #000;
+            border-radius: 20px 20px 40px 40px;
+            background: var(--skin-color);
         }
 
         .body-container {
@@ -127,6 +150,10 @@ class PowerPuffGirl extends HTMLElement {
                 </div>    
                  <div class="mouth"></div>
                 </div>
+            <div class="arms">
+                <div class="left arm"></div>
+                <div class="right arm"></div>
+            </div>
             <div class="body-container">
                 <div class="body"></div>
             </div>

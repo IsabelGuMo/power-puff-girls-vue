@@ -1,1 +1,1 @@
-import "./components/PowerPuffGirl.js";
+import "./components/BubblesPowerPuffGirl.js";
