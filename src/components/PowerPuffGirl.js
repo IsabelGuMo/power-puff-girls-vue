@@ -1,4 +1,5 @@
 import "./PowerPuffEye.js";
+import "./PowerPuffLeg.js";
 
 class PowerPuffGirl extends HTMLElement {
     constructor() {
@@ -85,6 +86,8 @@ class PowerPuffGirl extends HTMLElement {
                 drop-shadow(0 2px 0 #000);
             transform: translateY(-5%);
             position: relative;
+            z-index: 2;
+        
         }
         .body-container .body {
             width: 100%;
@@ -97,8 +100,14 @@ class PowerPuffGirl extends HTMLElement {
                 #000 28%, 71%, 
                 var(--power-puff-color) 72% 100%
                 );
+                
         }
 
+        .legs {
+            display: flex;
+            position: relative;
+            z-index: 5;
+        }
     `;
     }
 
@@ -108,7 +117,7 @@ class PowerPuffGirl extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML =  /* html */`
-        <style>${PowerPuffGirl.styles}</style>;
+        <style>${PowerPuffGirl.styles}</style>
         <div class="container">    
             <div class="head">
                 <div class="hair"></div>
@@ -121,16 +130,9 @@ class PowerPuffGirl extends HTMLElement {
             <div class="body-container">
                 <div class="body"></div>
             </div>
-            <div class="legs"></div>
-                <div class="lefth leg">
-                    <div class="shoe"></div>
-                    <div class="sock"></div>
-                </div>
-                <div class="right leg">
-                    <div class="shoe">
-                        <div class="sock"></div>
-                    </div>
-                </div>
+            <div class="legs">
+                <power-puff-leg class="left"></power-puff-leg>
+                <power-puff-leg class="right up"></power-puff-leg>
             </div>
         </div>`;
     }
