@@ -84,14 +84,14 @@ class PowerPuffGirl extends HTMLElement {
                 drop-shadow(-2px 0 0 #000)
                 drop-shadow(0 -2px 0 #000)
                 drop-shadow(0 2px 0 #000);
-            transform: translateY(-5%);
+            transform: translateY(-15%);
             position: relative;
             z-index: 2;
         
         }
         .body-container .body {
             width: 100%;
-            height: 100%;
+            height: 80%;
             clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
             background: 
             linear-gradient(

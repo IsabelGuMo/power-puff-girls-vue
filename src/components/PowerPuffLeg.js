@@ -15,7 +15,7 @@ class PowerPuffLeg extends HTMLElement {
                 box-shadow: 0 6px 0 #0005 inset;
                 background: #fff;
                 border: 3px solid #000;
-                transform: traslateY(-30%);
+                transform: translateY(-40%);
                 position: relative;
         }
 
@@ -26,7 +26,6 @@ class PowerPuffLeg extends HTMLElement {
           border-radius: 0 0 50% 50%;
           position: absolute;
           transform: translate(-8%, 75%);
-          
           display: flex;
           justify-content: center;
           align-items: center;
@@ -45,7 +44,7 @@ class PowerPuffLeg extends HTMLElement {
             height: 90%;
             box-shadow: none;
             border-radius: 50%;
-            transform: translate(5%, -40%);
+            transform: translate(5%, -66%);
         } 
 
         :host(.up) .shoe {
