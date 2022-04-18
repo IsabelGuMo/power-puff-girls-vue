@@ -1,4 +1,6 @@
 import "./PowerPuffGirl.js";
+import "./PowerPuffPonyTail.js";
+
 
 class BubblesPowerPuffGirl extends HTMLElement {
     constructor() {
@@ -9,7 +11,22 @@ class BubblesPowerPuffGirl extends HTMLElement {
     static get styles() {
         return /* css */`
             :host {
+                --width: 225px;
+                --height: calc(var(--width) + calc(var(--width) * 0.3));
+                --power-puff-color: #53a7e7;
+                --hair-color: #fcdb04;
+                --trail-x: 0;
 
+                position: relative;
+        }
+
+        .ponytails {
+            width: 150%;
+            height: 30%;
+            display: flex;
+            justify-content: space-between;
+            transform: translate(-16%, -40%);
+            position: absolute;
         }
     `;
     }
@@ -22,8 +39,10 @@ class BubblesPowerPuffGirl extends HTMLElement {
         this.shadowRoot.innerHTML =  /* html */`
         <style>${BubblesPowerPuffGirl.styles}</style>
         <div class="container">
-        <div class="lefth ponytail"></div>
-        <div class="right ponytail"></div>
+            <div class="ponytails">
+                <power-puff-pony-tail class="left"></power-puff-pony-tail>
+                <power-puff-pony-tail class="right"></power-puff-pony-tail>
+            </div>
             <power-puff-girl class="bubbles"></power-puff-girl>
         </div>`;
     }

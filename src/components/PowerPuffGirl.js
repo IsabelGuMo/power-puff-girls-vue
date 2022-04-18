@@ -10,19 +10,15 @@ class PowerPuffGirl extends HTMLElement {
     static get styles() {
         return /* css */`
             :host {
-                --width: 225px;
-                --height: calc(var(--width) + calc(var(--width) * 0.3));
                 --skin-color: #f4cfb4;
                 --border-size: 3px;
-                --power-puff-color: #53a7e7;
-
+                
                 position: relative;
         }
 
         .container {
             width: var(--width);
             height: var(--height);
-            background: #0005;
             display: flex;
             flex-direction: column;
             align-items: center;
