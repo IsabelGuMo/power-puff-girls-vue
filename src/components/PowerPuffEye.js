@@ -7,7 +7,7 @@ class PowerPuffEye extends HTMLElement {
     static get styles() {
         return /* css */`
             :host {
-                width: calc(var(--width) * 0.60);
+                width: calc(var(--width) * 0.57);
                 height: 100%;
                 background: #fff;
                 border: var(--border-size) solid #000;

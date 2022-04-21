@@ -1,10 +1,38 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
-    background: #333;
+    background: linear-gradient(#e60b88, #111);
+}
+
+body,
+.container {
+    height: 100%;
 }
 
 .container {
     display: flex;
-    justify-content:center;
-    margin-top: 6em;
+    justify-content: center;
+    align-items: center;
+    gap: 0 60px;
+}
+
+.container > * {
+    animation: float 1.5s ease-in-out infinite alternate;                    
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(30px);
+    }
 }

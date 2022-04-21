@@ -1,6 +1,6 @@
 import "./PowerPuffGirl.js";
 import "./PowerPuffPonyTail.js";
-
+import "./PowerPuffTrail"
 
 class BubblesPowerPuffGirl extends HTMLElement {
     constructor() {
@@ -44,6 +44,7 @@ class BubblesPowerPuffGirl extends HTMLElement {
                 <power-puff-pony-tail class="right"></power-puff-pony-tail>
             </div>
             <power-puff-girl class="bubbles"></power-puff-girl>
+            <power-puff-trail></power-puff-trail>
         </div>`;
     }
 }
