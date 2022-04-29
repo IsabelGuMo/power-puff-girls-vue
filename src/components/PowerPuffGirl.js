@@ -16,6 +16,8 @@ class PowerPuffGirl extends HTMLElement {
                 position: relative;
         }
 
+        
+
         .container {
             width: var(--width);
             height: var(--height);
@@ -23,7 +25,7 @@ class PowerPuffGirl extends HTMLElement {
             flex-direction: column;
             align-items: center;
         }
-
+        
         .head {
            width: 100%; 
            height: 65%;
